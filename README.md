@@ -1,0 +1,1 @@
+# device_xiaomi_mt6895-common
