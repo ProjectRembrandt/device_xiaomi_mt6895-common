@@ -330,6 +330,10 @@ vendor/lib64/libdolbyeglplugin.so
 vendor/lib64/libdolbyottcameracontrol.so
 vendor/lib64/libdolbyplugin.so
 vendor/lib64/libformatter.so
+vendor/lib64/libcodec2_soft_mtk_imaadpcmdec.so
+vendor/lib64/libcodec2_soft_mtk_msadpcmdec.so
+vendor/lib64/libcodec2_soft_mtk_alacdec.so
+vendor/lib64/libcodec2_soft_mtk_apedec.so
 
 # Media (MMS)
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
