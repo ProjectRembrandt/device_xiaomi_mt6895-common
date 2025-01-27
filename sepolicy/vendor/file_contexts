@@ -134,6 +134,7 @@
 
 # Graphics
 /dev/mi_display/disp_feature u:object_r:vendor_displayfeature_device:s0
+/system/bin/disp_feature u:object_r:xiaomi_display_exec:s0
 
 # Mfidoca
 /vendor/bin/fidoca_isee u:object_r:hal_mfidoca_default_exec:s0
