@@ -867,8 +867,10 @@ on boot
 #Power Manager
     write /sys/power/pm_freeze_timeout 2000
 
-    # Touch feature
+    # Touch feature & Display feature
     chown system system /dev/xiaomi-touch
+    chown system system /dev/mi_display/disp_feature
+    chmod 0666 /dev/mi_display/disp_feature
     chmod 0660 /dev/xiaomi-touch
 
 on property:vold.decrypt=trigger_reset_main
@@ -895,6 +897,9 @@ on property:vendor.audio.cit.spkcal.copy=true
     copy /data/vendor/cit/aw_cali.bin /mnt/vendor/persist/factory/audio/aw_cali.bin
     chmod 666 /mnt/vendor/persist/factory/audio/aw_cali.bin
     chmod 666 /data/vendor/cit/aw_cali.bin
+
+on property:dev.bootcomplete=1 && property:persist.sys.parts.dc.enable=*
+    exec /system/bin/disp_feature 8 ${persist.sys.parts.dc.enable}
 
 # Mount mdota
 on property:ro.boot.slot_suffix=_a
