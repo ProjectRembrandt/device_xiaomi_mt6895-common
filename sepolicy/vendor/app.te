@@ -1,7 +1,7 @@
 get_prop({ appdomain -isolated_app_all }, vendor_fingerprint_prop)
 get_prop({ appdomain -isolated_app_all }, vendor_mlipay_prop)
 
-allow { 
+allow {
     platform_app
     untrusted_app
     system_app

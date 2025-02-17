@@ -6,6 +6,8 @@
 
 COMMON_PATH := device/xiaomi/mt6895-common
 
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # A/B
 AB_OTA_UPDATER := true
 
@@ -59,7 +61,6 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
-
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 bootconfig
 
 # Bootloader
@@ -85,8 +86,9 @@ TARGET_KERNEL_CONFIG := \
 	gki_defconfig \
 	vendor/xiaomi_mt6895.config \
 	vendor/$(PRODUCT_DEVICE).config
+
 TARGET_KERNEL_DTB := \
-        vendor/mediatek/mt6895.dtb
+    vendor/mediatek/mt6895.dtb
 
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 
